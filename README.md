@@ -167,3 +167,41 @@ Topics include:
 - ⊙ **Time domain derivative:** `F{f′(x)} = iω F(ω)`
 - ⊙ **Frequency domain derivative:** `F{xf(x)} = i · d/dω F(ω)`
 
+
+### Page 6 — Fourier Method 3 + Ramanujan's Formula for π + Gautschi's Inequality
+
+**Left column — Fourier proof resolves:**
+- ⊙ *Now taking both sides of the differential equation:*
+  - `iωF(ω) = −1/σ² · d/dω F(ω)`
+  - *we can write this as:* `d/dω F(ω) / F(ω) = −ωσ²`
+- ⊙ *Integrating both sides:*
+  - `∫₀^ω (d/dω F(ω))/F(ω) dω = −∫₀^ω ωσ² dω`
+  - `ln|F(ω)| − ln|F(0)| = 0`
+- ⊙ *Since the Gaussian is normalized, ln|F(0)| = 0:*
+  - `∴ ln|F(ω)| = −ω²σ²/2`
+  - `F(ω) = e^(−σ²ω²/2)` ← **Gaussian emerges from integration**
+
+**[METHOD THREE] — Bilateral Laplace Transform:**
+- *We have bilateral or two sided Laplace transform defined as:*
+  - `L{f(x)} = ∫_{−∞}^{∞} f(t)e^(−st) dt`
+  - `F(ω) = a/√(2b) · e^(−ω²/4b)`
+
+**Right column — Ramanujan's Formula for π:**
+```
+1/π = (2√2 / 9801) · Σ_{k=0}^{∞} (4k)!(1103 + 26390k) / ((k!)⁴ · 396^(4k))
+```
+- 9801 = 99² / 396 = 4×99
+
+**GAUTSCHI'S INEQUALITY:**
+```
+x^(1-s) < Γ(x+1)/Γ(x+s) < (x+1)^(1-s),  x ∈ ℝ⁺, s ∈ (0,1)
+```
+- *inequality of ratios regarding the gamma function. Let x be a positive real number and let s ∈ (0,1)*
+
+**Proof — strict log-convexity of Γ:**
+- `Γ(x+s) < Γ(x)^(1-s) · Γ(x+1)^s = x^(s-1) · Γ(x+1)`
+- *which yields:* `x^(1-s) < Γ(x+1)/Γ(x+s)` — (i)
+- `Γ(x+1) < Γ(x+s)^s · Γ(x+s+1)^(1-s) = (x+s)^(1-s) · Γ(x+s)`
+- *which yields:* `Γ(x+1)/Γ(x+s) < (x+s)^(1-s)` — (ii)
+- ⊙ *Combining i & ii:* `x^(1-s) < Γ(x+1)/Γ(x+s) < (x+1)^(1-s)` ✓
+
