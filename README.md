@@ -142,3 +142,28 @@ Topics include:
   - a = height of peak / b = center / c = standard deviation (width)
   - μₙ = center / σₙ = width / z = x-axis
 
+
+### Page 5 — Fourier Transform of the Gaussian: Three Methods
+
+**Setup:**
+- ⊙ *Gaussian functions represent the probability density function of a normally distributed random variable with expected value μ=b, variance σ²=c*
+- **[boxed]** `f(x) = 1/(σ√2π) · e^(−½((x−μ)/σ)²)`
+- *Let's see the proof with three methods*
+
+**METHOD ONE:**
+- Let `f(x) = ae^(−bx²)`
+- Fourier transform: `F(ω) = 1/√(2π) ∫_{−∞}^{∞} f(x)e^(−iωx) dx`
+
+**METHOD TWO — Completing the square:**
+- Normalized Gaussian: `f(x) = 1/(σ√2π) · e^(−x²/2σ²)`, where `∫f(x)dx = 1`
+- `F{ae^(−bx²)} = a/√(2π) ∫ e^(−b((x + iω/2b)² − (iω/2b)²)) dx`
+- Let `t = x + iω/2b`, `dt = dx`:
+- `= a/√(2π) · e^(ω²/4b) ∫ e^(−bt²) dt = a/√(2b) · e^(−ω²/4b)` ← ***which is again a Gaussian***
+
+**Differentiating the Gaussian:**
+- `d/dx f(x) = −x/σ² · f(x)` — the derivative IS the Gaussian times −x/σ²
+
+**Fourier transform properties for derivatives:**
+- ⊙ **Time domain derivative:** `F{f′(x)} = iω F(ω)`
+- ⊙ **Frequency domain derivative:** `F{xf(x)} = i · d/dω F(ω)`
+
