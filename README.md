@@ -744,3 +744,27 @@ G ≤ QFT3, Z phi, SUM
 ```
 → Φ_universal(S) = ∫∫∫ (x,y|z) · W(temporal) · C(causal) · A(adaptive) dX dY dZ
 ```
+
+---
+
+### Page 23 — Universal Equations: Three Tests + Euler-Lagrange + Signature
+
+**Header:** `Universal Equations`
+
+**(boxed):** `Three Tests`
+
+1. It governs many systems → **SCOPE**
+2. It falls out of symmetry or variational principles → **STRUCTURE**
+3. It reduces to the known special cases (classical, relativistic, quantum) without breaking → **LIMITS**
+
+**(boxed 1):** `Principle of Stationary Action → Euler-Lagrange Equations`
+- `→ δS = 0,  S = ∫ L(q,q̇,t) dt`
+- `leads to...`
+- `→ d/dt(∂L/∂q̇_i) - ∂L/∂q_i = 0`
+- **Field Form:** `→ ∂_μ(∂L/∂(∂_μφ_a)) - ∂L/∂φ_a = 0`
+
+**P (side note):** *"This is the backbone. Choose the right Lagrangian L, you get particle mechanics, waves, classical fields, etc."*
+
+**(boxed 2):** *(contents on next page)*
+
+**Bottom of page:** Three overlapping spiral signatures (growing larger), `lxmndsn`, `AeaAvo`
