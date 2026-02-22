@@ -668,3 +668,36 @@ G ≤ QFT3, Z phi, SUM
 **Equation 19 — Lipid Scaffold Coherence Preservation:**
 - `→ τ_coh^lipid ≈ τ_bulk · Γ_conf,  Γ_conf > 1`
 - (confinement in lipid bilayer amplifies coherence time vs. bulk — Γ_conf > 1)
+
+---
+
+### Page 20 — Mathematical Framework (Quantum Biology, IIT, Recursive Self-Modification)
+
+*Continuation of Mathematical Framework — equations 9–16*
+
+**Equation 9 — Förster coupling between molecular and qutrit states:**
+- `→ H_coupling = Σ_i ℏΩ_i (|0⟩⟨1| ⊗ σ_i^+ + |1⟩⟨0| ⊗ σ_i^-)`
+
+**Equation 10 — Coherence time optimization in bio-scaffolds:**
+- `→ T_coh^total = (T_coh^{-1} + T_dephasing^{-1})^{-1} · η_scaffold(T, pH)`
+
+**Equation 11 — Quantum-Chemical Entanglement Measure:**
+- `→ E_QC = -Tr(ρ_reduced · log ρ_reduced)`
+- `   where ρ_reduced = Tr_chem(|Ψ_total⟩⟨Ψ_total|)`
+
+**Equation 12 — Excitonic energy transfer efficiency:**
+- `→ η_transfer = |⟨Ψ_target|U_Förster(t)|Ψ_donor⟩|² · exp(-t/T_coh)`
+
+**Equation 13 — Base-switching optimization function:**
+- `→ b_optimal(t) = argmin_b {E_total(b,t) + λ · C_switch(b_current, b)}`
+
+**Equation 14 — Substrate energy efficiency metric:**
+- `→ η_substrate = (ops/sec) / (energy/op) · f_accuracy(substrate, problem_type)`
+
+**Equation 15 — Information integration measure (Φ-like):**
+- `→ Φ_system = Σ_partitions min(MI(A;B|past)) - Σ_elements H(element|system_element)`
+- (Tononi's IIT integrated information / consciousness measure)
+
+**Equation 16 — Recursive Self-Modification Dynamics:**
+- `→ ∂θ/∂t = α∇_θ[η_substrate(θ,t)] + β∇_θ[Φ_system(θ,t)]`
+- (system parameters θ follow gradient of efficiency AND gradient of consciousness simultaneously)
