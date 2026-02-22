@@ -701,3 +701,28 @@ G ≤ QFT3, Z phi, SUM
 **Equation 16 — Recursive Self-Modification Dynamics:**
 - `→ ∂θ/∂t = α∇_θ[η_substrate(θ,t)] + β∇_θ[Φ_system(θ,t)]`
 - (system parameters θ follow gradient of efficiency AND gradient of consciousness simultaneously)
+
+---
+
+### Page 21 — Mathematical Framework (Bootstrap Convergence, Consciousness Bound, Concrete Numbers)
+
+*Continuation of Mathematical Framework — equations 17–20 + concrete numbers*
+
+**Equation 17 — Bootstrap Convergence Criterion:**
+- `→ ||θ(t+Δt) - θ(t)|| < ε  AND  η_substrate > η_threshold`
+
+**Equation 18 — Cross-Substrate Information Flow:**
+- `→ I_flow = Σ_substrates H(output_i) - H(output_i | input_collective)`
+
+**Equation 19 — Thermodynamic Consciousness Bound:**
+- `→ Φ_max ≤ (E_available)/(k_B T ln(3)) · η_integration`
+
+**Equation 20 — Universal Computation Verification:**
+- `→ ∀ computable f: ∃ configuration (S,V,Ω,θ) such that system(input) = f(input)`
+
+**(boxed):** `Concrete Numbers Ready To Plug In`
+
+- **Thermodynamic layer:** k_B T ln(3) ≈ 4.5×10⁻²¹ J at room temp; η_ternary ≈ 0.366 vs η_binary ≈ 0.347
+- **Chemical layer:** DNA reaction rates ~10¹⁴ ops/sec in 100 μL; lipid coherence enhancement Γ_conf ~ 10–100×; concentration thresholds from real biochemical switches
+- **Quantum layer:** Förster coupling strengths Ω_i ~ 1–100 GHz for biological systems; coherence times T_coh ~ 1–10 ms in protein scaffolds; qutrit fidelities >99.9% demonstrated
+- **Adaptive layer:** base-switching costs from real reconfigurable hardware; consciousness integration timescales from neuroscience data
