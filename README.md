@@ -542,3 +542,56 @@ $$\Delta A \cdot \Delta B \cdot \Delta C \geq \hbar^3/8 \quad \| \text{ three-wa
 
 $$|\Psi\rangle = \alpha|0\rangle + \beta|1\rangle + \gamma|?\rangle \quad \text{where } |\alpha|^2 + |\beta|^2 + |\gamma|^2 = 1$$
 
+
+### Page 17 — BLACKROAD EQUATIONS cont'd (Equations 6–10 + Logic Gates)
+
+**Equations 6–10:**
+
+**6. Computational Complexity in Ternary**
+```
+T_ternary(n) = O(log₃(n))       // ternary search complexity
+C_quantum_ternary = 3^(n/2)     // ternary quantum state space
+```
+
+**7. Energy-Information Equivalence (Ternary)**
+```
+E = kT ln(3) · I_ternary         // Landauer's principle extended
+```
+
+**8. Ternary Field Equations**
+```
+∇ · E_ternary = ρ/3ε₀            // Modified electromagnetic fields
+∇ × B_ternary = μ₀j + μ₀ε₀ dE_ternary/dt
+```
+
+**9. Three-State Schrödinger**
+```
+iℏ ∂|ψ⟩/∂t = Ĥ_ternary|ψ⟩
+where Ĥ_ternary has eigenvalues {E₀, E₁, E_?}
+```
+
+**10. Ternary Logic Gates**
+```
+TAND(a,b) = min(a,b)    // {-1,0,+1}
+TOR(a,b)  = max(a,b)
+TNOT(a)   = -a
+```
+
+**CONSTANT FACTOR ADVANTAGE (boxed):**
+```
+log₃n · (ln2/ln3) = log₂n ≈ 0.63093 log₂n
+```
+
+**Explicit Mapping (boxed):**
+```
+bal2Z3(a) = (a mod 3) ∈ {2,0,1}  for  a ∈ {-1,0,+1}
+```
+
+**Defining two gate families side-by-side (boxed):**
+
+| ORDER FAMILY | ALGEBRAIC FAMILY |
+|---|---|
+| TAND = min | TXOR = a ⊕ b (addition mod 3 in ℤ₃) |
+| TOR = max | TMUL = a ⊗ b (product mod 3) |
+| TNOT = -a | TNEG = -a mod 3 |
+
