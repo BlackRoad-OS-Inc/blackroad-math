@@ -243,3 +243,28 @@ a [ Aa   aa ]   b [ Bb   bb ]
 ```
 - `bb ≠ 1/4 (25%)`
 
+
+### Page 8 — Complex Numbers as Matrices
+
+**Title: COMPLEX NUMBERS AS MATRICES**
+
+```
+a + bi  ↔  [ a  -b ]
+           [ b   a ]
+```
+
+```
+(a+bi)(c+di) = ac + bdi² + adi + bci
+             = ac − bd + (ad+bc)i
+               ac − bd
+               bc + ad
+```
+
+**Matrix multiplication form:**
+```
+[ a  -b ] [ c ]   =   [ ac − bd ]
+[ b   a ] [ d ]       [ bc + ad ]
+```
+
+*The complex number a+bi is isomorphic to the 2×2 rotation matrix. Complex multiplication = matrix multiplication. i ↔ [[0,-1],[1,0]], i² = −I.*
+
