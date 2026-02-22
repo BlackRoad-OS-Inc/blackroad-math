@@ -768,3 +768,46 @@ G ≤ QFT3, Z phi, SUM
 **(boxed 2):** *(contents on next page)*
 
 **Bottom of page:** Three overlapping spiral signatures (growing larger), `lxmndsn`, `AeaAvo`
+
+---
+
+### Page 24 — Qutrit Density Matrix, SVD, Gell-Mann Decomposition *(Final Page)*
+
+**Qutrit state vector:**
+```
+|ψ⟩ = [ 0.4711 ]
+      [ 0.7708 ]   (normalized from amplitude)
+      [ 0.8620 ]
+```
+**Probabilities:** `0.315, 0.594, 0.740`
+
+**Density matrix ρ = |ψ⟩⟨ψ|:**
+```
+ρ = [ 0.2219  0.3629  0.4062 ]
+    [ 0.3629  0.5941  0.6639 ]
+    [ 0.4062  0.6639  0.7401 ]
+```
+
+**Time evolution ρ̇ = dρ/dt (complex entries, Tr(ρ̇) = 0):**
+```
+ρ̇ = [ 0.0600+0j        0.0872−0.2680j     0.0753−0.2680j ]
+     [ 0.0872+0.2680j  −0.0400+0j          0.0560−0.2680j ]
+     [ 0.0753+0.2680j   0.0560+0.2680j    −0.0200+0j      ]
+```
+
+**Written (cursive):** `decomposition of the density`
+
+**Highlighted:** `SVd` *(Singular Value Decomposition — one nonzero singular value ≈ 1.559, pure state rank 1)*
+
+**Written (cursive, final line):** `Gellman Decomposition`
+*(Gell-Mann basis decomposition: ρ = I/3 + Σₖ rₖλₖ/2, eight SU(3) generators)*
+
+---
+
+*End of notebook — 24 pages total (page 14 was duplicate scan of page 13)*
+
+---
+
+> © BlackRoad OS, Inc. All rights reserved. Proprietary and confidential.  
+> Unauthorized use, reproduction, or distribution is strictly prohibited.  
+> This mathematical work is the exclusive intellectual property of BlackRoad OS, Inc.
