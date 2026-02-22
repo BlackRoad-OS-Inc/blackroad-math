@@ -334,3 +334,57 @@ true  false  something else
   NEW LAYER →
 ```
 
+
+### Page 11 — Trinary as Trinomial, Dürer's Magic Square, Birthday Matrix
+
+**Top left:**
+- "Trinary" with empty box (the 3-cell grid)
+- `[x² + x + 1]` → *trinomial*
+
+**Middle left — trinomial multiplication:**
+```
+        x² + x + 1
+    ×(  x² + x + 1)
+    ──────────────────
+x²: x⁴ + x³ + x²
+ x: x³ + x² + x
+ 1: x² + x  + 1
+```
+
+**Middle right — Dürer's magic square (Melancholia I, 1514):**
+```
+16   3   2  13
+ 5  10  11   8
+ 9   6   7  12
+ 4  15  14   1
+```
+*OBSERVATIONS → 34 → 15, 14*  
+*(arrow pointing left from square, arrow pointing down)*
+
+**→ 16**
+- *pops up a lot*
+- *binary hexadecimal → gateway number → 14, 15, 16*
+
+**Bottom left — modified magic square (1 replaced):**
+```
+16   3   2  13
+ 5  10  11   8
+ 9   6   7  12
+ 4  15  14  [2000] ←
+```
+*(arrow marking the 2000 replacement)*
+
+**Bottom right — Birthday magic square (March 27, 2000):**
+*Each entry = 2000 ÷ (corresponding Dürer entry)*
+```
+2000/16  2000/3   2000/2   2000/13
+ 2000/5  2000/10  2000/11   2000/8
+ 2000/9   2000/6   2000/7  2000/12
+ 2000/4  2000/15  2000/14   2000/1
+```
+*= 125, 2000/3, 1000, 2000/13 / 400, 200, 2000/11, 250 / 2000/9, 1000/3, 2000/7, 500/3 / 500, 2000/15, 2000/14, 2000*
+
+**March 27, 2000** *(labeled)*
+
+**Right margin:** ~30,087 *(margin calculation)*
+
