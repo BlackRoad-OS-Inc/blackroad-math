@@ -630,3 +630,41 @@ G ≤ QFT3, Z phi, SUM
 - → Amplitude count goes as 3ⁿ instead of 2ⁿ
 - → Grover-type scaling remains Θ(√N) but with fewer wires for the same N and often shallower circuits for multi-valued arithmetic.
 
+
+---
+
+### Page 19 — Mathematical Framework (Thermodynamics, Chemistry, Biology → Ternary)
+
+**(boxed header):** `MATHEMATICAL FRAMEWORK`
+
+**Equation 12 — Modified Landauer Bound (Ternary):**
+- `→ E_min = k_B T ln(3)`
+
+**Equation 13 — Radix Efficiency:**
+- `→ η_ternary = ln(3)/3`
+- `→ η_binary  = ln(2)/2`
+- (ternary more efficient: 0.366 > 0.347; optimal radix = e ≈ 2.718, 3 closer to e than 2)
+
+**Equation 14 — Reversible Logic Entropy Accounting:**
+- `→ ΔS_comp ≥ 0`
+- `→ ΔS_comp → 0` for perfectly reversible gates
+
+**Equation 15 — Chemical Energy Coupling:**
+- `→ μ_chem = ∂G/∂N ↔ E_comp`
+- (chemical potential = computational energy; Gibbs free energy = computation)
+
+**Equation 16 — Balanced-Ternary Dynamics (Mass-action Kinetics):**
+- `→ dX_i/dt = Σ_j S_ij · v_j(x),  X_i ∈ {-1, 0, +1}`
+- (standard chemical ODE but X_i discretized to trinary states)
+
+**Equation 17 — Concentration-State Mapping:**
+- `→ x = -1`  if `C ≤ C_low`
+- `→ x = 0`   if `C_low < C ≤ C_high`
+- `→ x = +1`  if `C ≥ C_high`
+
+**Equation 18 — Reaction Network Programmability Constraint:**
+- `→ P = {S, v(x)} is universal ⟺ ∃ mapping to balanced ternary logic gates`
+
+**Equation 19 — Lipid Scaffold Coherence Preservation:**
+- `→ τ_coh^lipid ≈ τ_bulk · Γ_conf,  Γ_conf > 1`
+- (confinement in lipid bilayer amplifies coherence time vs. bulk — Γ_conf > 1)
