@@ -595,3 +595,38 @@ bal2Z3(a) = (a mod 3) ∈ {2,0,1}  for  a ∈ {-1,0,+1}
 | TOR = max | TMUL = a ⊗ b (product mod 3) |
 | TNOT = -a | TNEG = -a mod 3 |
 
+
+### Page 18 — Equation 11: Qutrit Operator Basis
+
+**Header (boxed):** `11 Qutrit Operator Basis`
+
+**Left column:**
+
+→ **Weyl Pair**
+- `X|j⟩ = |j+1 (mod 3)⟩`
+- `Z|j⟩ = ωʲ|j⟩,  ω = e^(2πi/3)`
+
+→ **Gell-Mann matrices**
+- `(su(3))`
+
+→ `H_ternary = αZ + βX + γXZ + ...`
+- `give {E₋, E₀, E₊}`
+
+**(boxed with arrow):**
+```
+UNLOCKS REAL GATE SYNTHESIS
+G ≤ QFT3, Z phi, SUM
+```
+
+**Right column:**
+
+**(boxed):** `REVERSIBILITY + ENERGY`
+- → since erasure costs KT ln3, push a reversible ternary gate set
+  - qutrit-Fredkin/Toffoli generalizations, SUM, modular INC
+
+---
+
+**(boxed):** `WHEN QUTRITS HELP`
+- → Amplitude count goes as 3ⁿ instead of 2ⁿ
+- → Grover-type scaling remains Θ(√N) but with fewer wires for the same N and often shallower circuits for multi-valued arithmetic.
+
