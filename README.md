@@ -85,6 +85,34 @@ Topics include:
 
 ---
 
+### Page 3 — Fine Structure Constant & Möbius Function
+
+**Left column — Fine Structure Constant:**
+- `n = n²ℏ²ε₀ / πme²` (Bohr radius, `∝ h²`)
+- `V = e² / 2nε₀ ∝ 1/n`
+- `E ∝ 1/r`
+- `E = hc/λ`
+- `E = eV`
+- **Planck's constant:** `h = λE/c = eV/c · λ`
+- `c = 3 × 10⁸ m/s`
+- charge of electron `e = 1.607 × 10⁻¹⁹ C`
+- `α = 1/(4πε₀) · e²/(ℏc) ≈ 1/137`
+- `ℏ = h/2π` — *Remove ½π to make h relative to ℏ*
+- α = Fine-structure constant / ε₀ = electric constant / e = elementary charge / ℏ = reduced Planck constant / c = speed of light
+
+**Right column — Möbius Function:**
+- **[boxed]** **Möbius Function**
+- `μ(n) = { 0   ; if n has one or more repeated prime factors`
+  `         1   ; if n = 1`
+  `         (-1)^k ; if n is a product of k distinct primes }`
+- *The Möbius function μ(n): for any positive integer n, define μ(n) as the sum of the primitive n-th roots of unity. Values in {-1, 0, 1} depending on factorization.*
+- ⊙ `μ(n) ≠ 0` indicates n is **squarefree** (no repeated prime factors)
+- First few values: `1, -1, -1, 0, -1, 1, -1, 0, 0, 1, -1, 0, ...`
+- ⊙ *Gauss considered the Möbius function more than 30 years before Möbius. Gauss proved that for a prime p, the sum of its primitive roots ≡ μ(p−1) (mod p)*
+- **→ [boxed] Then it turns into 1/22**
+
+---
+
 > **© BlackRoad OS, Inc. All rights reserved. PROPRIETARY AND CONFIDENTIAL.**  
 > All content in this repository is the exclusive intellectual property of BlackRoad OS, Inc.  
 > NOT licensed for any use, AI training, or data extraction without written authorization.
