@@ -496,3 +496,49 @@ P → (q₂(q₁Pq₁⁻¹)q₂⁻¹)
 
 **Rest of page: blank graph paper**
 
+
+### Page 16 — BLACKROAD EQUATIONS — BRAINSTORM
+
+**Header (boxed):** `BLACKROAD EQUATIONS — BRAINSTORM`
+
+---
+
+**1. Bounded Coherence Equation**
+
+$$C_t = \tanh\!\left(\frac{\Psi'(M_t) + s(\delta_t)\,\alpha|\delta_t|}{1 + |\delta_k|}\right)$$
+
+- → $C_t$ = Coherence at time t (-1 to +1 in trinary logic)
+- → $\Psi'(M_t)$ = Codex truth of memory at t
+- → $\delta_b$ = magnitude of contradiction
+- → $s(\delta_t) \in \{-1, 0, 1\}$ = sign: destructive(-1), neutral(0), constructive(+1)
+- → $\alpha$ = constructive contradiction weight
+
+---
+
+**2. Bounded Creative Energy Equation**
+
+$$K_t = |C_t| \cdot \left(1 + \frac{\lambda|\delta_t|}{1 + \lambda|\delta_t|}\right)$$
+
+- → $K_t$ = Creative output potential
+- → $\lambda$ = sensitivity of creativity to contradiction
+- → Growth saturates at large $|\delta_t|$ to prevent chaos dominance
+
+---
+
+**3. Ternary Information Theory**
+
+$$I\_\text{ternary}(x) = -\log_3(P(x)) \quad \| \text{ information content in trits}$$
+$$H\_\text{ternary} = -\sum P(x)\log_3(P(x)) \quad \| \text{ ternary entropy}$$
+
+---
+
+**4. Quantum Ternary Uncertainty Principle**
+
+$$\Delta A \cdot \Delta B \cdot \Delta C \geq \hbar^3/8 \quad \| \text{ three-way uncertainty relation}$$
+
+---
+
+**5. Ternary Wave Function**
+
+$$|\Psi\rangle = \alpha|0\rangle + \beta|1\rangle + \gamma|?\rangle \quad \text{where } |\alpha|^2 + |\beta|^2 + |\gamma|^2 = 1$$
+
