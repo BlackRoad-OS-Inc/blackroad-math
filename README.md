@@ -205,3 +205,41 @@ x^(1-s) < Γ(x+1)/Γ(x+s) < (x+1)^(1-s),  x ∈ ℝ⁺, s ∈ (0,1)
 - *which yields:* `Γ(x+1)/Γ(x+s) < (x+s)^(1-s)` — (ii)
 - ⊙ *Combining i & ii:* `x^(1-s) < Γ(x+1)/Γ(x+s) < (x+1)^(1-s)` ✓
 
+
+### Page 7 — Faulhaber's Formula + Quadratic Formula + Punnett Square
+
+**Title: FAULHABER'S FORMULA**
+
+**Left column — General formula:**
+- `Σ_{k=1}^{n} k^p = 1^p + 2^p + 3^p + ... + n^p`
+- `= 1/(p+1) · Σ_{i=1}^{p+1} (−1)^(δᵢₚ) · C(p+1,i) · B_{p+1−i} · nⁱ`
+- ⊙ *Faulhaber's Formula gives the general formula for the power sum for the first n positive integers*
+
+**First few sums:**
+- `Σk = n/2 · (n+1)`
+- `Σk² = 1/6 · (2n³ + 3n² + n)`
+- `Σk³ = 1/4 · (n⁴ + 2n³ + n²)`
+- `Σk⁴ = 1/30 · (6n⁵ + 15n⁴ + 10n³ − n)`
+- `Σk⁵ = 1/12 · (2n⁶ + 6n⁵ + 5n⁴ − n²)`
+
+**Right column — Odd power theorem:**
+- ⊙ *Faulhaber observed that if p is odd then 1^p + 2^p + ... + n^p is a polynomial function of*
+- `a = 1 + 2 + 3 + ... + n = n/2 · (n+1)` ← triangle number
+
+**That is [boxed]:**
+- ⊙ `1³ + 2³ + 3³ + ... + n³ = a²`
+- ⊙ `1⁵ + 2⁵ + 3⁵ + ... + n⁵ = (4a³ − a²)/3`
+- ⊙ `1⁷ + 2⁷ + 3⁷ + ... + n⁷ = (6a⁴ − 4a² + a²)/3`
+- ⊙ `1⁹ + 2⁹ + 3⁹ + ... + n⁹ = (16a⁵ − 20a³ + 12a² − 3)/5`
+
+**Quadratic Formula:**
+- `x = (−b ± √(b²−4ac)) / 2a`
+
+**Punnett Square — AaBb × AaBb:**
+```
+     B    b          B    b
+A [ AA   Aa ]   B [ BB   Bb ]
+a [ Aa   aa ]   b [ Bb   bb ]
+```
+- `bb ≠ 1/4 (25%)`
+
