@@ -420,3 +420,57 @@ METHOD TO MADNESS
 ```
 *(trailing arrow with nothing after it)*
 
+
+### Page 13 — Quaternions, Octonions, Hamilton, Pauli Matrices
+
+**Top — number system boxes:**
+- Quaternion circle diagram: k(top), j(right), i(right), −i(left), −j(bottom-left), −k(bottom)
+- **QUATERNIONS** box: `2 + 7i + 1j + 8k`
+- **OCTONIONS** box: `3e¹ − 2.3e² + ... + 1.6e⁸`
+
+**Ruled statements:**
+- *Complex numbers are for real numbers*
+- *Quaternions are a four-dimensional extension of complex numbers*
+
+**Middle — William Hamilton section:**
+- `+i  +j  +k` (three imaginary axes)
+- 3D coordinate axes diagram (i, j, k)
+- Box: *Complex Number 3.14 + 1.59i*
+- Note: *Modern vectors didn't exist back in the day*
+
+**Dot and cross product formulas:**
+```
+[x'][x²]
+[y'][y²] = x¹x² + y¹y² + z¹z²
+[z'][z²]
+
+[x¹][x²]   [y¹z² − z¹y²]
+[y¹][y²] = [z¹x² − x¹z²]
+[z¹][z²]   [x¹y² − y¹x²]
+```
+
+**Quaternion example:**
+```
+3.23 + 8.46i + 2.64j + 3.38k
+REAL        IMAGINARY PART
+PART
+```
+
+**Boxed identity:**
+```
+i² = j² = k² = ijk = −1
+```
+
+**Rotation formulas (boxed):**
+```
+P → (qᵢPqᵢ⁻¹)
+P → (q₂(q₁Pq₁⁻¹)q₂⁻¹)
+```
+
+**Bottom — three Bloch sphere diagrams + Pauli matrices:**
+```
+[0 1]    [0 −i]    [1  0]
+[1 0]    [i  0]    [0 −1]
+σ_x       σ_y       σ_z
+```
+
