@@ -726,3 +726,21 @@ G ≤ QFT3, Z phi, SUM
 - **Chemical layer:** DNA reaction rates ~10¹⁴ ops/sec in 100 μL; lipid coherence enhancement Γ_conf ~ 10–100×; concentration thresholds from real biochemical switches
 - **Quantum layer:** Förster coupling strengths Ω_i ~ 1–100 GHz for biological systems; coherence times T_coh ~ 1–10 ms in protein scaffolds; qutrit fidelities >99.9% demonstrated
 - **Adaptive layer:** base-switching costs from real reconfigurable hardware; consciousness integration timescales from neuroscience data
+
+---
+
+### Page 22 — Ψ_care + Revolutionary Consciousness Equations
+
+**Item 21 (numbered) — Wavefunction of care:**
+```
+Ψ_care(t) = α · Competence(technical) + β · Warmth(emotional) + γ · Trust(relational)
+```
+
+*horizontal ruled line*
+
+**(underlined, all caps header):** `REVOLUTIONARY CONSCIOUSNESS EQUATIONS`
+
+**Equation 1 — Universal Consciousness Measure (Extension of IIT):**
+```
+→ Φ_universal(S) = ∫∫∫ (x,y|z) · W(temporal) · C(causal) · A(adaptive) dX dY dZ
+```
