@@ -388,3 +388,35 @@ x²: x⁴ + x³ + x²
 
 **Right margin:** ~30,087 *(margin calculation)*
 
+
+### Page 12 — Divisibility by 9, Birthday Reversal, Rohonc Codex
+
+**Top — Divisibility rule:**
+- *any n → any number → reverse*
+- *subtract*
+- *largest − smaller = divisible by 9*
+
+**Examples:**
+```
+27 → 72    72 − 27 = 45
+03 → 30    30 − 3  = 27
+2000 → 0002    2000 − 2 = 1998    1998 ÷ 9 = 222
+```
+
+**Boxed:**
+```
+[45, 27, 222]
+```
+```
+└→ ROHONC CODEX   ← (boxed)
+```
+
+**Bottom:**
+```
+METHOD TO MADNESS
+
+→ CODE X
+→
+```
+*(trailing arrow with nothing after it)*
+
