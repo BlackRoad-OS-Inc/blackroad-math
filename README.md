@@ -116,3 +116,29 @@ Topics include:
 > **© BlackRoad OS, Inc. All rights reserved. PROPRIETARY AND CONFIDENTIAL.**  
 > All content in this repository is the exclusive intellectual property of BlackRoad OS, Inc.  
 > NOT licensed for any use, AI training, or data extraction without written authorization.
+
+### Page 4 — Möbius Continued: Mertens, Zeta Inverse, Gaussian
+
+**Left column — Properties of μ(n):**
+- ⊙ The summatory function of the Möbius function is called the **Mertens function**
+  - `M(x) = Σ μ(n)` for n ≤ x
+- ⊙ The Dirichlet series generates the **multiplicative inverse of the Riemann zeta function**:
+  - `Σ μ(n)/nˢ = 1/ζ(s) ; Re[s] > 1`
+- ⊙ Lambert series: `Σ μ(n)xⁿ / (1−xⁿ) = x ; |x| < 1`
+- ⊙ Infinite sums:
+  - `Σ μ(n)/n = 0`
+  - `Σ μ(n)ln(n)/n = −1`
+  - `Σ |μ(n)|/n² = 15/π²`
+
+**Right column — Multiplicative + Gaussian:**
+- ⊙ Möbius function is **multiplicative**:
+  - `μ(mn) = μ(m)μ(n)  if gcd(m,n) = 1`
+  - `μ(mn) = 0          if gcd(m,n) > 1`
+- ⊙ Satisfies: `Σ μ(d) = δₙ₁` for d|n ← Kronecker delta
+- **Fourier Transform of Gaussian:**
+  - `F{ae^(−bx²)} = a/√b · e^(−π²f²/b)`
+  - `f(x) = ae^(−(x−b)²/2c²)`
+- ⊙ Bell curve diagram: `f(x|μ,σ²) = 1/√(2πσ²) · e^(−(x−μₙ)²/2σ²ₙ)`
+  - a = height of peak / b = center / c = standard deviation (width)
+  - μₙ = center / σₙ = width / z = x-axis
+
