@@ -474,3 +474,25 @@ P → (q₂(q₁Pq₁⁻¹)q₂⁻¹)
 σ_x       σ_y       σ_z
 ```
 
+
+### Page 15 — Periodic Table, Hydrogen/Helium/Everythingelse
+
+**Top — element tile (helium template, symbol replaced with variable):**
+```
+┌────────────────┐
+│ x           4  │
+│      2         │
+└────────────────┘
+```
+*(x = symbol variable, 2 = atomic number, 4 = mass number → He)*
+
+**Three checkboxes:**
+```
+☑ hydrogen
+☑ helium
+☑ everythingelse
+```
+*(note: "everythingelse" written as one word)*
+
+**Rest of page: blank graph paper**
+
