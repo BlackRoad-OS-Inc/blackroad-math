@@ -303,3 +303,34 @@ a + bi  ↔  [ a  -b ]
 *i³ = −i → sign −1. i²⁷ = i³ = −i → sign −1. i²⁰⁰⁰ = 1 → sign +1.*  
 *Product: (−1)(−1)(1) = 1. Sum: −1.*
 
+
+### Page 10 — Complex Numbers, Trinary Logic, New Layer
+
+**Top left [boxed: complex]:**
+- `y = mx + b` → *a real and imaginary part*
+- `two axis  1, 0, −1`
+- `complex #s`
+- `REAL ↙  ↘ IMAGINARY`
+
+**Bottom left:**
+- `y = mx + b` ↺ *b,times*
+- `→ z = m∘w + b`
+- `z = m · w + b` ← *b stays the same. fun*
+
+**Right column — Number system hierarchy:**
+```
+REAL NUMBERS
+     ↓
+ Imaginary
+     ↓
+Other dimensions  →  quaternion
+     ↓
+  TRINARY
+     ↙
+{−1, 0, 1}
+true  false  something else
+  imaginary numbers
+     ↑
+  NEW LAYER →
+```
+
