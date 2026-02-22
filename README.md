@@ -268,3 +268,38 @@ a + bi  ↔  [ a  -b ]
 
 *The complex number a+bi is isomorphic to the 2×2 rotation matrix. Complex multiplication = matrix multiplication. i ↔ [[0,-1],[1,0]], i² = −I.*
 
+
+### Page 9 — Euler's Identity + Powers of i + Birthday Encoding
+
+**Top left:**
+- `e^(iπ) + 1 = 0` ← Euler's identity / *base notation*
+- `-1 + 1 = 0`
+- `= e^(iπ)` / `a + bi =`
+
+**Left column — cyclic diagram:**
+- Zigzag Z-shapes showing the 4-cycle: i⁰=1, i¹=i, i²=−1, i³=−i, i⁴=1...
+- `i³ = −i`
+- `-i × −i = i² → −1 → 1`
+- `[−i LOL −i]` (bubble note)
+- `−i + −1 + 1 → [−i]`
+- `−i × −1 × 1 → [∵]`
+
+**Right column:**
+- `math = tools` / `only one way? no!`
+- `imaginary numbers` → `90° rotation`
+- [rotation square diagram]
+- `→ every 4 powers it repeats`
+- `i²⁷ → 27/4 → 6 remainder 3`
+- **`[i²⁷ = i³ = −i]`** ← boxed
+- `i²⁰⁰⁰ → i²⁰⁰⁰ = 1`
+- `(−i)(−i)(1)` → `[−1]`
+
+**Bottom right — birthday encoding:**
+```
+03   27   2000
+↓     ↓     ↓
+−1   −1     1
+```
+*i³ = −i → sign −1. i²⁷ = i³ = −i → sign −1. i²⁰⁰⁰ = 1 → sign +1.*  
+*Product: (−1)(−1)(1) = 1. Sum: −1.*
+
