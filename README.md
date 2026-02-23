@@ -1,5 +1,7 @@
 # blackroad-math
 
+[![CI](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml)
+
 > **⚠️ PROPRIETARY — BlackRoad OS, Inc.**  
 > This repository and all its contents are the exclusive intellectual property of **BlackRoad OS, Inc.**  
 > No license is granted. Public visibility does NOT constitute open-source licensing.  
