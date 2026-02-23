@@ -55,6 +55,13 @@ class MeasurementResult:
 
         return max(self.counts.items(), key=lambda item: (item[1], item[0]))[0]
 
+    def __eq__(self, other: object) -> bool:
+        """Allow equality comparison with plain dicts (ignores zero counts)."""
+        if isinstance(other, dict):
+            nonzero = {k: v for k, v in self.counts.items() if v > 0}
+            return nonzero == other
+        return NotImplemented
+
     def total_shots(self) -> int:
         """Return the total number of measurement shots."""
 
@@ -106,6 +113,10 @@ class QuantumCircuit:
         """
 
         self._apply_unitary(_H, (qubit,))
+
+    def x(self, qubit: int) -> None:
+        """Apply the Pauli-X (NOT) gate to *qubit*. Alias for :meth:`pauli_x`."""
+        self.pauli_x(qubit)
 
     def pauli_x(self, qubit: int) -> None:
         """Apply the Pauli-X (NOT) gate to ``qubit``."""
