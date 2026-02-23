@@ -41,9 +41,20 @@ class Trinary:
 
     digits: List[int]
 
-    def __post_init__(self) -> None:
+    def __init__(self, digits: "int | List[int]") -> None:
+        if isinstance(digits, int):
+            if digits not in (-1, 0, 1):
+                raise ValueError("Single-digit Trinary must be -1, 0 or 1")
+            self.digits = [digits]
+        else:
+            self.digits = list(digits)
         if any(d not in (-1, 0, 1) for d in self.digits):
             raise ValueError("Trinary digits must be -1, 0 or 1")
+
+    @property
+    def value(self) -> int:
+        """Return the numeric value (int equivalent) of this Trinary."""
+        return self.to_int()
 
     def to_int(self) -> int:
         return sum(d * (3 ** i) for i, d in enumerate(self.digits))
