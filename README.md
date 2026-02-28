@@ -1,29 +1,67 @@
 # blackroad-math
 
+> Mathematical foundations, trinary logic, and quantum simulation for BlackRoad OS.
+
 [![CI](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml)
 
-> **⚠️ PROPRIETARY — BlackRoad OS, Inc.**  
-> This repository and all its contents are the exclusive intellectual property of **BlackRoad OS, Inc.**  
-> No license is granted. Public visibility does NOT constitute open-source licensing.  
-> No code, documentation, or assets may be used, reproduced, or distributed without written authorization.  
-> © BlackRoad OS, Inc. All rights reserved.
+## Overview
 
----
+The mathematical engine powering BlackRoad OS. Implements trinary logic `{-1, 0, +1}`, quantum circuit simulation, consciousness modeling, and the Amundson Equations. Source material for the simulation-theory paper.
 
-**Mathematical Foundations**  
-*Alexa Louise Amundson*
+## Structure
 
----
+```
+blackroad-math/
+├── forge/              # Production math engines
+│   ├── consciousness.py
+│   ├── unified_geometry.py
+│   ├── fractals.py
+│   ├── operators.py
+│   └── proofs.py
+├── lab/                # Experimental / research
+│   ├── amundson_equations.py
+│   ├── quantum_finance.py
+│   ├── prime_explorer.py
+│   └── trinary_logic.py
+├── agents/             # Agent modules
+├── src/                # Core implementations
+│   └── trinary.py      # Trinary logic system
+├── tests/              # Test suite
+├── quantum_simulator.py # State-vector quantum simulator
+└── lucidia_logic.py    # Symbolic math for Lucidia
+```
 
-Handwritten mathematical notes and proofs. Source material for the simulation-theory paper.
+## Quick Start
 
-Topics include:
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+pytest tests/ -v --tb=short
+
+# Run with coverage
+pytest tests/ --cov=. --cov-report=term-missing -q
+```
+
+## Key Topics
+
 - Complex analysis and imaginary numbers
 - The halting problem and self-reference
 - Quantum mechanics (Schrödinger, Heisenberg, Hamiltonian)
 - Cantor diagonalization
 - Eigenvalue theory
 - Gödel incompleteness
+- Trinary logic and ternary information theory
+- Amundson Equations (317+ proprietary mathematical equations)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+© BlackRoad OS, Inc. — All rights reserved. Proprietary.
 
 ---
 

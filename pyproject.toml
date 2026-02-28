@@ -7,7 +7,7 @@ name = "lucidia-math"
 version = "0.1.0"
 description = "Lucidia Math - Advanced mathematical engines: consciousness modeling, unified geometry, quantum finance, prime exploration"
 readme = "README.md"
-license = "MIT"
+license = "LicenseRef-Proprietary"
 requires-python = ">=3.10"
 authors = [
     { name = "BlackRoad OS", email = "hello@blackroad.io" }
@@ -27,7 +27,7 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
+    "License :: Other/Proprietary License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -62,8 +62,8 @@ lucidia-math = "forge.main:main"
 [project.urls]
 Homepage = "https://blackroad.io"
 Documentation = "https://docs.blackroad.io/lucidia-math"
-Repository = "https://github.com/BlackRoad-OS/lucidia-math"
-Issues = "https://github.com/BlackRoad-OS/lucidia-math/issues"
+Repository = "https://github.com/BlackRoad-OS-Inc/blackroad-math"
+Issues = "https://github.com/BlackRoad-OS-Inc/blackroad-math/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["forge", "lab"]
