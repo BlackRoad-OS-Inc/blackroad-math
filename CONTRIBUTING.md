@@ -298,7 +298,7 @@ def test_trinary_and_operation():
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the project's license.
+By contributing, you acknowledge and agree that your contributions are provided on a work-for-hire and/or assignment basis, and that all rights in your contributions are owned by BlackRoad OS, Inc., as described in Section 4 ("Contributions and Work Product") of the LICENSE file.
 
 ---
 
