@@ -1,6 +1,6 @@
-# Contributing to BlackRoad OS
+# Contributing to BlackRoad Math
 
-> Thank you for your interest in contributing to BlackRoad OS!
+> Thank you for your interest in contributing to BlackRoad Math!
 
 ---
 
