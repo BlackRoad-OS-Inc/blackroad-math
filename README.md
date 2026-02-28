@@ -34,9 +34,11 @@ blackroad-math/
 ## Quick Start
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# Install the package and runtime dependencies (from pyproject.toml)
+pip install -e .
 
+# (Optional) install development/test extras
+pip install -e ".[dev]"
 # Run tests
 pytest tests/ -v --tb=short
 
