@@ -1,29 +1,5 @@
 """Lucidia Math Forge package."""
 
-from .unified_geometry import (  # noqa: F401
-    AdaptiveLearningKernel,
-    CoherenceEnergyField,
-    ComplexManifoldField,
-    FractalMobiusCoupler,
-    QuantumEntanglementMeter,
-    QuantumLogicMapper,
-    QuantumTernaryField,
-    RecurrenceOperator,
-    ThermalSubstrate,
-    UnifiedGeometryEngine,
-)
-
-__all__ = [
-    "AdaptiveLearningKernel",
-    "CoherenceEnergyField",
-    "ComplexManifoldField",
-    "FractalMobiusCoupler",
-    "QuantumEntanglementMeter",
-    "QuantumLogicMapper",
-    "QuantumTernaryField",
-    "RecurrenceOperator",
-    "ThermalSubstrate",
-    "UnifiedGeometryEngine",
 from .consciousness import (  # noqa: F401
     CategoryTensorNetwork,
     ComplexQuaternionMapper,
@@ -38,18 +14,38 @@ from .consciousness import (  # noqa: F401
     ScaleInvarianceAnalyzer,
     SpinNetwork,
 )
+from .unified_geometry import (  # noqa: F401
+    AdaptiveLearningKernel,
+    CoherenceEnergyField,
+    ComplexManifoldField,
+    FractalMobiusCoupler,
+    QuantumEntanglementMeter,
+    QuantumTernaryField,
+    RecurrenceOperator,
+    ThermalSubstrate,
+    UnifiedGeometryEngine,
+)
 
 __all__ = [
+    "AdaptiveLearningKernel",
     "CategoryTensorNetwork",
+    "CoherenceEnergyField",
+    "ComplexManifoldField",
     "ComplexQuaternionMapper",
     "EntropyInformationBridge",
     "FractalDynamics",
+    "FractalMobiusCoupler",
     "HilbertPhaseAnalyzer",
     "MeasurementOperator",
     "Morphism",
     "NoetherAnalyzer",
+    "QuantumEntanglementMeter",
     "QuantumLogicMapper",
+    "QuantumTernaryField",
     "Quaternion",
+    "RecurrenceOperator",
     "ScaleInvarianceAnalyzer",
     "SpinNetwork",
+    "ThermalSubstrate",
+    "UnifiedGeometryEngine",
 ]

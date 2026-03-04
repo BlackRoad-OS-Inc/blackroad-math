@@ -10,6 +10,7 @@ References:
   - BlackRoad OS CECE architecture
   - Trinary logic system (lab/trinary_extended.py)
 """
+
 from __future__ import annotations
 
 import math
@@ -20,10 +21,11 @@ from typing import Callable
 @dataclass
 class EmergenceState:
     """State of an emergent system at time t."""
-    t: float                       # time step
-    C: float                       # complexity at time t
-    delta: float                   # contradiction magnitude |δ_t|
-    lam: float = 1.0               # amplification constant λ
+
+    t: float  # time step
+    C: float  # complexity at time t
+    delta: float  # contradiction magnitude |δ_t|
+    lam: float = 1.0  # amplification constant λ
     history: list[float] = field(default_factory=list)
 
     def K(self) -> float:
@@ -79,9 +81,7 @@ class ContradictionAmplifier:
     def is_diverging(self, window: int = 5) -> bool:
         """True if K is monotonically increasing over last `window` steps."""
         recent = self.trajectory()[-window:]
-        return len(recent) >= 2 and all(
-            recent[i] < recent[i + 1] for i in range(len(recent) - 1)
-        )
+        return len(recent) >= 2 and all(recent[i] < recent[i + 1] for i in range(len(recent) - 1))
 
 
 def run_emergence_simulation(

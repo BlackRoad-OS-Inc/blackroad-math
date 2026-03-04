@@ -1,4 +1,5 @@
 """Sine wave algebra and paradox testing."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

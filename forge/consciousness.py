@@ -27,12 +27,12 @@ specific linkage:
 All implementations use only the Python standard library so they remain easy to
 inspect, extend, and integrate into higher level orchestration layers.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
 from math import atan2, cos, exp, log, pi, sin, sqrt
 from typing import Any, Callable, Dict, List, Sequence, Tuple
-
 
 # ---------------------------------------------------------------------------
 # Quaternion helpers
@@ -147,9 +147,7 @@ class SpinNetwork:
             "Z": ((1 + 0j, 0 + 0j), (0 + 0j, -1 + 0j)),
         }
 
-    def pauli_matrix(
-        self, label: str
-    ) -> Tuple[Tuple[complex, complex], Tuple[complex, complex]]:
+    def pauli_matrix(self, label: str) -> Tuple[Tuple[complex, complex], Tuple[complex, complex]]:
         """Return the requested Pauli matrix."""
 
         try:
@@ -623,7 +621,7 @@ class ScaleInvarianceAnalyzer:
             raise ValueError("x must be positive")
         if self.alpha is None or self.coefficient is None:
             self.estimate()
-        return self.coefficient * x ** self.alpha
+        return self.coefficient * x**self.alpha
 
     def verify(self, scale: float) -> float:
         if scale <= 0:
@@ -631,7 +629,7 @@ class ScaleInvarianceAnalyzer:
         base_x, _ = self.samples[0]
         baseline = self.predict(base_x)
         scaled = self.predict(scale * base_x)
-        return scaled / (scale**(self.alpha or 1.0) * baseline)
+        return scaled / (scale ** (self.alpha or 1.0) * baseline)
 
 
 __all__ = [

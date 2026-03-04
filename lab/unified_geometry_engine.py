@@ -8,15 +8,14 @@ Each class encapsulates the equations referenced in the specification.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from fractions import Fraction
 import cmath
 import math
+from dataclasses import dataclass, field
+from fractions import Fraction
 from typing import Callable
 
 import numpy as np
 from numpy.typing import ArrayLike, NDArray
-
 
 Array1D = NDArray[np.float64]
 ComplexArray = NDArray[np.complex128]
@@ -288,7 +287,9 @@ def _dirac_gamma_matrices() -> tuple[ComplexArray, ComplexArray, ComplexArray, C
     sigma_z = np.array([[1, 0], [0, -1]], dtype=complex)
     identity = np.eye(2, dtype=complex)
 
-    gamma0 = np.block([[identity, np.zeros((2, 2), dtype=complex)], [np.zeros((2, 2), dtype=complex), -identity]])
+    gamma0 = np.block(
+        [[identity, np.zeros((2, 2), dtype=complex)], [np.zeros((2, 2), dtype=complex), -identity]]
+    )
     gamma_i = []
     for sigma in (sigma_x, sigma_y, sigma_z):
         upper = np.zeros((2, 2), dtype=complex)
@@ -405,7 +406,9 @@ class NoetherAnalyzer:
             momenta[index] = (plus - minus) / (2.0 * self.epsilon)
         return momenta
 
-    def conserved_quantity(self, t: float, q: ArrayLike, qdot: ArrayLike, delta_q: ArrayLike) -> float:
+    def conserved_quantity(
+        self, t: float, q: ArrayLike, qdot: ArrayLike, delta_q: ArrayLike
+    ) -> float:
         momentum = self.conjugate_momentum(t, q, qdot)
         variation = np.asarray(delta_q, dtype=float)
         if variation.shape != momentum.shape:

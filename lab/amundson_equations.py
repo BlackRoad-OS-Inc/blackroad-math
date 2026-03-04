@@ -13,16 +13,16 @@ The key constructs follow the original exposition:
 
   .. math::
 
-     \frac{d\phi}{dt} = \omega_0 + \lambda C(x, y) - \eta E_\phi
+     \frac{d\\phi}{dt} = \\omega_0 + \\lambda C(x, y) - \\eta E_\\phi
 
   where ``C`` measures cosine coherence and ``E`` denotes the
   decoherence energy penalty.
 
 * :func:`coherence` isolates the cosine alignment term
-  :math:`C(x, y)=\cos(\phi_x-\phi_y)`.
+  :math:`C(x, y)=\\cos(\\phi_x-\\phi_y)`.
 
 * :func:`decoherence_energy` implements the thermal energy
-  penalty :math:`E_\phi = k_B T \, \lambda \, r_x r_y (1-\cos(\phi_x-\phi_y))`.
+  penalty :math:`E_\\phi = k_B T \\, \\lambda \\, r_x r_y (1-\\cos(\\phi_x-\\phi_y))`.
 
 * :func:`phase_derivative` exposes the coherence gradient as a
   reusable utility.
@@ -63,7 +63,7 @@ def decoherence_energy(
     lambda_: float,
     k_b_t: float,
 ) -> float:
-    """Compute the decoherence energy :math:`E_\phi`.
+    r"""Compute the decoherence energy :math:`E_\phi`.
 
     Parameters mirror the seed formulation: ``r_x`` and ``r_y``
     are participation amplitudes, ``lambda_`` controls coupling,
@@ -86,12 +86,12 @@ def phase_derivative(
 ) -> float:
     """Evaluate the Amundson I coherence gradient equation.
 
-    This function computes :math:`\frac{d\phi}{dt}` from the
+    This function computes :math:`\frac{d\\phi}{dt}` from the
     provided state, matching the proposed dynamic:
 
     .. math::
 
-       \omega_0 + \lambda\,C(x,y) - \eta\,E_\phi
+       \\omega_0 + \\lambda\\,C(x,y) - \\eta\\,E_\\phi
     """
 
     c_term = coherence(phi_x, phi_y)
@@ -156,7 +156,7 @@ class AmundsonCoherenceModel:
 
 
 def amundson_energy_balance(*, energy: float, dissipation: float) -> float:
-    """Return the net resonant energy after accounting for dissipation.
+    r"""Return the net resonant energy after accounting for dissipation.
 
     The current Amundson II formulation focuses on conserving the
     available coherence energy while subtracting the irreversible loss

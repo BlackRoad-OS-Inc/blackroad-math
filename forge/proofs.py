@@ -4,6 +4,7 @@ The engine tracks assumptions and inferred statements.  When a
 contradiction is detected it is appended to ``creative_contradictions.json``
 located alongside this module.
 """
+
 from __future__ import annotations
 
 import json

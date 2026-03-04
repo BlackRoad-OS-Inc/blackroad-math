@@ -36,10 +36,12 @@ class EmotionalAgent:
         """
         value = emotional_gravitational_field(emotion)  # type: ignore
         # Record the evaluated emotion and its field.
-        self.memory.setdefault("emotions", []).append({
-            "input": emotion,
-            "field": value,
-        })
+        self.memory.setdefault("emotions", []).append(
+            {
+                "input": emotion,
+                "field": value,
+            }
+        )
         save_memory(self.memory)
         return value
 

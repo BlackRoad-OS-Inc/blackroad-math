@@ -1,0 +1,21 @@
+name = "blackroad-math-worker"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Routes — override in your Cloudflare dashboard or add a custom domain
+# [[routes]]
+# pattern = "math.blackroad.io/*"
+# zone_name = "blackroad.io"
+
+[vars]
+ENVIRONMENT = "production"
+
+# Durable Objects for stateful long-running computations
+[[durable_objects.bindings]]
+name = "COMPUTATION_QUEUE"
+class_name = "ComputationQueue"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["ComputationQueue"]

@@ -1,7 +1,8 @@
 """Tests for QuantumCircuit simulator."""
-import pytest
+
 import numpy as np
-from quantum_simulator import QuantumCircuit, MeasurementResult
+
+from quantum_simulator import QuantumCircuit
 
 
 def test_initial_state_is_zero():

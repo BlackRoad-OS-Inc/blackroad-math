@@ -127,6 +127,7 @@ def main():
         print(f"  {_col(a)} vs {_col(b)}: {contradiction_check(a, b)}")
 
     import sys
+
     if "--interactive" in sys.argv or "-i" in sys.argv:
         interactive_mode()
 
