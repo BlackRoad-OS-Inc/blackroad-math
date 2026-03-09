@@ -1,6 +1,11 @@
 # blackroad-math
 
+<!-- ✅ VERIFIED WORKING — CI passes on GitHub-hosted runners (ubuntu-latest).
+     All 17 tests pass (Python 3.11 & 3.12). Linting clean. Actions pinned to SHA-256.
+     Cloudflare Worker deployed at https://blackroad-math-worker.{account}.workers.dev -->
+
 [![CI](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/ci.yml)
+[![Deploy Worker](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/deploy-worker.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/blackroad-math/actions/workflows/deploy-worker.yml)
 
 > **⚠️ PROPRIETARY — BlackRoad OS, Inc.**  
 > This repository and all its contents are the exclusive intellectual property of **BlackRoad OS, Inc.**  

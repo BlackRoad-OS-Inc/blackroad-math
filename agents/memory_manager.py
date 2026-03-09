@@ -12,7 +12,8 @@ import os
 from typing import Any, Dict, Optional
 
 # Default path for storing memory
-MEMORY_FILE = os.path.join(os.path.dirname(__file__), 'memory.json')
+MEMORY_FILE = os.path.join(os.path.dirname(__file__), "memory.json")
+
 
 def load_memory(file_path: str = MEMORY_FILE) -> Dict[str, Any]:
     """Load memory from a JSON file.
@@ -22,16 +23,18 @@ def load_memory(file_path: str = MEMORY_FILE) -> Dict[str, Any]:
     if not os.path.exists(file_path):
         return {}
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except (json.JSONDecodeError, IOError):
         # Return empty memory on failure
         return {}
 
+
 def save_memory(memory: Dict[str, Any], file_path: str = MEMORY_FILE) -> None:
     """Save memory dictionary to a JSON file."""
-    with open(file_path, 'w', encoding='utf-8') as f:
+    with open(file_path, "w", encoding="utf-8") as f:
         json.dump(memory, f, indent=2)
+
 
 class MemoryManager:
     """Class to manage memory state for Lucidia agents."""

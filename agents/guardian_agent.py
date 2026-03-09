@@ -12,10 +12,11 @@ from __future__ import annotations
 
 from typing import Any, Dict, Optional
 
+from .codex_recursion import contradiction_operator
+from .contradiction_log import log_contradiction
+
 # Import utility functions from Lucidia's core modules.
 from .memory_manager import load_memory, save_memory
-from .contradiction_log import log_contradiction
-from .codex_recursion import contradiction_operator
 
 
 class GuardianAgent:
@@ -43,10 +44,12 @@ class GuardianAgent:
         """
         original, contradiction = contradiction_operator(statement)
         # Persist the observation.
-        self.memory.setdefault("statements", []).append({
-            "original": original,
-            "contradiction": contradiction,
-        })
+        self.memory.setdefault("statements", []).append(
+            {
+                "original": original,
+                "contradiction": contradiction,
+            }
+        )
         save_memory(self.memory)
         # Log contradiction if it differs from original.
         if contradiction is not None and contradiction != original:
@@ -69,12 +72,14 @@ class GuardianAgent:
             True if the deviation is within the threshold, False otherwise.
         """
         deviation = abs(current - baseline)
-        self.memory.setdefault("deviations", []).append({
-            "baseline": baseline,
-            "current": current,
-            "deviation": deviation,
-            "threshold": threshold,
-        })
+        self.memory.setdefault("deviations", []).append(
+            {
+                "baseline": baseline,
+                "current": current,
+                "deviation": deviation,
+                "threshold": threshold,
+            }
+        )
         save_memory(self.memory)
         if deviation > threshold:
             log_contradiction(f"Deviation exceeded: {deviation} > {threshold}")

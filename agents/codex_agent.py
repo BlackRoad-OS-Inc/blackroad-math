@@ -16,10 +16,10 @@ from typing import Any, Optional
 
 # Import necessary core functions and memory manager
 from ..lucidia_logic import (
-    psi_prime,
-    truth_reconciliation,
     emotional_gravity,
+    psi_prime,
     self_awakening,
+    truth_reconciliation,
 )
 from ..memory_manager import MemoryManager
 

@@ -1,4 +1,5 @@
 """Lucidia Math Forge interactive shell."""
+
 from __future__ import annotations
 
 import cmd
@@ -113,6 +114,7 @@ class LucidiaShell(cmd.Cmd):
         for key, value in result.items():
             print(f"{key}: {value}")
         self.history.append({"unified_engine": {k: str(v) for k, v in result.items()}})
+
     def do_connective(self, arg: str) -> None:
         """Demonstrate the connective consciousness physics layers."""
 
@@ -152,20 +154,22 @@ class LucidiaShell(cmd.Cmd):
         scale = ScaleInvarianceAnalyzer([(1.0, 1.0), (2.0, 2.5), (4.0, 6.2)])
         alpha = scale.estimate()["alpha"]
 
-        self.history.append({
-            "connective": {
-                "quaternion": quaternion.as_tuple(),
-                "spin": spin_step,
-                "collapse": collapse,
-                "orbit": len(orbit),
-                "phase": phase,
-                "noether": conserved,
-                "tensor_dim": tensor_dim,
-                "information_gain": info["information_gain"],
-                "transition": transition,
-                "alpha": alpha,
+        self.history.append(
+            {
+                "connective": {
+                    "quaternion": quaternion.as_tuple(),
+                    "spin": spin_step,
+                    "collapse": collapse,
+                    "orbit": len(orbit),
+                    "phase": phase,
+                    "noether": conserved,
+                    "tensor_dim": tensor_dim,
+                    "information_gain": info["information_gain"],
+                    "transition": transition,
+                    "alpha": alpha,
+                }
             }
-        })
+        )
 
         print("Quaternion from phase:", quaternion.as_tuple())
         print("Spin step:", spin_step)

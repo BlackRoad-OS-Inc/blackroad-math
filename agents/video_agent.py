@@ -9,17 +9,16 @@ Usage example:
     agent.generate_video("A sunset over a calm ocean with gentle waves", output_path="sunset_video.mp4", num_frames=10, fps=4)
 """
 
-from typing import List, Any
 import os
-from pathlib import Path
 from dataclasses import dataclass
+from typing import Any, List
 
 try:
-    import torch
-    from diffusers import StableDiffusionPipeline, EulerAncestralDiscreteScheduler
-    from PIL import Image
-    import numpy as np
     import cv2
+    import numpy as np
+    import torch
+    from diffusers import EulerAncestralDiscreteScheduler, StableDiffusionPipeline
+    from PIL import Image
 except ImportError:
     # The heavy libraries are optional; if they're missing the agent will raise a helpful error at runtime.
     StableDiffusionPipeline = None
@@ -29,16 +28,21 @@ except ImportError:
     np = None
     cv2 = None
 
+
 @dataclass
 class Frame:
     image: Any
     description: str
 
+
 class VideoAgent:
     """
     A minimal agent that generates videos from text prompts.
     """
-    def __init__(self, model_name: str = "runwayml/stable-diffusion-v1-5", device: str = None) -> None:
+
+    def __init__(
+        self, model_name: str = "runwayml/stable-diffusion-v1-5", device: str = None
+    ) -> None:
         """
         Initialize the VideoAgent with a text-to-image model.
 
@@ -54,10 +58,11 @@ class VideoAgent:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         # Load the diffusion pipeline
         self.pipe = StableDiffusionPipeline.from_pretrained(
-            model_name,
-            torch_dtype=torch.float16 if self.device == "cuda" else torch.float32
+            model_name, torch_dtype=torch.float16 if self.device == "cuda" else torch.float32
         )
-        self.pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(self.pipe.scheduler.config)
+        self.pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(
+            self.pipe.scheduler.config
+        )
         self.pipe = self.pipe.to(self.device)
 
     def _generate_frame(self, prompt: str, guidance_scale: float = 7.5) -> Frame:
@@ -114,7 +119,14 @@ class VideoAgent:
             out.write(frame_array)
         out.release()
 
-    def generate_video(self, description: str, output_path: str, num_frames: int = 8, fps: int = 4, guidance_scale: float = 7.5) -> None:
+    def generate_video(
+        self,
+        description: str,
+        output_path: str,
+        num_frames: int = 8,
+        fps: int = 4,
+        guidance_scale: float = 7.5,
+    ) -> None:
         """
         Generate a video from a text description and save it to a file.
 

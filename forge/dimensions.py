@@ -1,4 +1,5 @@
 """Simple higher-dimensional math utilities."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

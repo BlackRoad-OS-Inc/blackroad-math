@@ -7,13 +7,13 @@ across internal lore: Caesar-style cryptography, Fibonacci analytics,
 Laplace-transform-inspired oscillators, and a nod to the so-called
 Unified Harmonic theory.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Dict, List, Tuple
 
 import numpy as np
-
 
 # ============================================================================
 # CAESAR CIPHER - SECURE AGENT COMMUNICATION

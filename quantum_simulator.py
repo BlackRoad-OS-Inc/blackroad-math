@@ -22,10 +22,11 @@ mirroring what would happen in an actual quantum experiment.  The
 ``probabilities`` method can be used at any point to inspect the full
 probability distribution for a subset of qubits.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Iterable, List, Mapping, Optional, Sequence
+from typing import Dict, Mapping, Optional, Sequence
 
 import numpy as np
 
@@ -172,7 +173,9 @@ class QuantumCircuit:
                 for index, prob in enumerate(probs)
             }
 
-        permutation = list(qubit_tuple) + [i for i in range(self.num_qubits) if i not in qubit_tuple]
+        permutation = list(qubit_tuple) + [
+            i for i in range(self.num_qubits) if i not in qubit_tuple
+        ]
         tensor = np.transpose(state_tensor, permutation)
         shots_axis = tuple(range(len(qubit_tuple), self.num_qubits))
         marginal = np.sum(np.abs(tensor) ** 2, axis=shots_axis)
@@ -261,11 +264,15 @@ class QuantumCircuit:
             )
 
         state_tensor = self._state.reshape([2] * self.num_qubits)
-        permutation = list(qubit_tuple) + [i for i in range(self.num_qubits) if i not in qubit_tuple]
+        permutation = list(qubit_tuple) + [
+            i for i in range(self.num_qubits) if i not in qubit_tuple
+        ]
         tensor = np.transpose(state_tensor, permutation)
         reshaped = tensor.reshape(expected_dimension, -1)
         updated = unitary @ reshaped
-        updated_tensor = updated.reshape([2] * len(qubit_tuple) + [2] * (self.num_qubits - len(qubit_tuple)))
+        updated_tensor = updated.reshape(
+            [2] * len(qubit_tuple) + [2] * (self.num_qubits - len(qubit_tuple))
+        )
         inverse_permutation = np.argsort(permutation)
         restored = np.transpose(updated_tensor, inverse_permutation)
         self._state = restored.reshape(-1)
@@ -283,7 +290,9 @@ class QuantumCircuit:
         return qubit_tuple
 
 
-def _distribution_from_probabilities(probabilities: np.ndarray, num_qubits: int) -> Dict[str, float]:
+def _distribution_from_probabilities(
+    probabilities: np.ndarray, num_qubits: int
+) -> Dict[str, float]:
     bitstrings = [format(index, f"0{num_qubits}b") for index in range(1 << num_qubits)]
     return {bitstring: float(prob) for bitstring, prob in zip(bitstrings, probabilities)}
 

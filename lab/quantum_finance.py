@@ -8,7 +8,6 @@ from typing import List
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 from .frameworks import select_backend
 
 

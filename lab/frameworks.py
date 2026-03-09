@@ -77,4 +77,3 @@ def select_backend(name: Optional[str] = None) -> MathBackend:
         if backend.name == name:
             return backend
     raise ValueError(f"Unknown math backend {name!r}")
-

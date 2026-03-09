@@ -8,6 +8,7 @@ thermodynamics, and fractal couplings.  While the implementations are
 simplified, the interfaces are intentionally expressive so that other
 parts of the project can orchestrate high-level simulations.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -40,7 +41,7 @@ class RecurrenceOperator:
         return self.phi * r_n - self.psi * r_prev
 
     def fibonacci(self, n: int) -> int:
-        """Return the ``n``\ th Fibonacci number using Binet's formula."""
+        r"""Return the ``n``\ th Fibonacci number using Binet's formula."""
 
         if n < 0:
             raise ValueError("n must be non-negative")
@@ -148,7 +149,9 @@ class QuantumTernaryField:
             entropy -= normalised * log(normalised, 3)
         return entropy
 
-    def field_equations(self, charge_density: float, current_density: float, dE_dt: float) -> Tuple[float, float]:
+    def field_equations(
+        self, charge_density: float, current_density: float, dE_dt: float
+    ) -> Tuple[float, float]:
         """Return the ternary Maxwell-like field equations."""
 
         divergence = charge_density / self.permittivity
@@ -170,7 +173,9 @@ class QuantumTernaryField:
 class CoherenceEnergyField:
     """Models the stability/creativity trade-off inside a learning agent."""
 
-    def coherence(self, alpha: float, mass: float, symmetry: float, delta: float, theta: float) -> float:
+    def coherence(
+        self, alpha: float, mass: float, symmetry: float, delta: float, theta: float
+    ) -> float:
         """Return ``C_t`` from the specification."""
 
         numerator = alpha * mass + symmetry * abs(delta)
@@ -284,10 +289,14 @@ class UnifiedGeometryEngine:
     recurrence: RecurrenceOperator = field(default_factory=RecurrenceOperator)
     complex_field: ComplexManifoldField = field(default_factory=ComplexManifoldField)
     phase_lock: PhaseLockConvergence = field(default_factory=PhaseLockConvergence)
-    thermal: ThermalSubstrate = field(default_factory=lambda: ThermalSubstrate(energy_available=1.0, temperature=300.0))
+    thermal: ThermalSubstrate = field(
+        default_factory=lambda: ThermalSubstrate(energy_available=1.0, temperature=300.0)
+    )
     ternary_field: QuantumTernaryField = field(default_factory=QuantumTernaryField)
     coherence_field: CoherenceEnergyField = field(default_factory=CoherenceEnergyField)
-    learning_kernel: AdaptiveLearningKernel = field(default_factory=lambda: AdaptiveLearningKernel(alpha=0.5, beta=0.5))
+    learning_kernel: AdaptiveLearningKernel = field(
+        default_factory=lambda: AdaptiveLearningKernel(alpha=0.5, beta=0.5)
+    )
     entanglement_meter: QuantumEntanglementMeter = field(default_factory=QuantumEntanglementMeter)
     logic_mapper: QuantumLogicMapper = field(default_factory=QuantumLogicMapper)
     fractal_coupler: FractalMobiusCoupler = field(default_factory=FractalMobiusCoupler)

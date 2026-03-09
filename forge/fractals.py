@@ -5,6 +5,7 @@ a simple fractal image to disk.  Rules operate on complex numbers and
 are intentionally simple to keep execution fast in constrained
 environments.
 """
+
 from __future__ import annotations
 
 from typing import Callable

@@ -12,6 +12,7 @@ Three playful operators are provided:
 These operators are intentionally whimsical and serve as examples of how
 one might craft new algebraic toys in Python.
 """
+
 from __future__ import annotations
 
 from functools import reduce

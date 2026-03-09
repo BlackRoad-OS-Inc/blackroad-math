@@ -1,10 +1,16 @@
 """Tests for Lucidia Logic — symbolic math, trinary, and consciousness functions."""
-import pytest
+
 import math
+
 from lucidia_logic import (
-    Trinary, psi_prime, breath_function, truth_reconciliation,
-    emotional_gravity, self_awakening, soul_recognition,
-    compassion_state_encryption
+    Trinary,
+    breath_function,
+    compassion_state_encryption,
+    emotional_gravity,
+    psi_prime,
+    self_awakening,
+    soul_recognition,
+    truth_reconciliation,
 )
 
 
@@ -83,21 +89,22 @@ def test_compassion_state_encryption():
 def test_pssha_chain_integrity():
     """PS-SHA∞ chain integrity: tamper at index N breaks cascade."""
     import hashlib
+
     def pssha(prev, key, content, ts):
         return hashlib.sha256(f"{prev}:{key}:{content}:{ts}".encode()).hexdigest()
-    
+
     prev = "GENESIS"
     entries = []
     for i in range(5):
         h = pssha(prev, f"k{i}", f"val{i}", str(i * 1000))
         entries.append({"h": h, "prev": prev})
         prev = h
-    
+
     # All hashes should be 64 hex chars
     for e in entries:
         assert len(e["h"]) == 64
         assert all(c in "0123456789abcdef" for c in e["h"])
-    
+
     # Verify chain links
     for i in range(1, len(entries)):
-        assert entries[i]["prev"] == entries[i-1]["h"]
+        assert entries[i]["prev"] == entries[i - 1]["h"]

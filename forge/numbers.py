@@ -14,6 +14,7 @@ Example
 >>> SurrealNumber(1, 2) + SurrealNumber(3, 4)
 SurrealNumber(left=4, right=6)
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass

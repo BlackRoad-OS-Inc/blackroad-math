@@ -5,10 +5,11 @@ Truth states: 1=True, 0=Unknown/Neutral, -1=False
 Used in the PS-SHA∞ memory chain for epistemic reasoning.
 Implements full Łukasiewicz three-valued logic.
 """
+
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
-
 
 # Truth values
 TRUE = 1
@@ -52,6 +53,7 @@ def t_xor(a: TruthValue, b: TruthValue) -> TruthValue:
 @dataclass
 class TrinaryProposition:
     """A proposition with a truth state and confidence."""
+
     statement: str
     truth: TruthValue = UNKNOWN
     confidence: float = 0.5  # 0.0 – 1.0
@@ -101,14 +103,18 @@ class TrinaryReasoner:
     def __init__(self) -> None:
         self._props: dict[str, TrinaryProposition] = {}
 
-    def assert_true(self, statement: str, confidence: float = 1.0, evidence: str = "") -> TrinaryProposition:
+    def assert_true(
+        self, statement: str, confidence: float = 1.0, evidence: str = ""
+    ) -> TrinaryProposition:
         prop = self._get_or_create(statement)
         if prop.truth == FALSE:
             prop.contradict(f"Previously FALSE, now asserted TRUE (conf={confidence})")
         prop.assert_true(confidence, evidence)
         return prop
 
-    def assert_false(self, statement: str, confidence: float = 1.0, evidence: str = "") -> TrinaryProposition:
+    def assert_false(
+        self, statement: str, confidence: float = 1.0, evidence: str = ""
+    ) -> TrinaryProposition:
         prop = self._get_or_create(statement)
         if prop.truth == TRUE:
             prop.contradict(f"Previously TRUE, now asserted FALSE (conf={confidence})")
@@ -136,8 +142,10 @@ class TrinaryReasoner:
         ops = {
             "NOT": lambda: t_not(a),
             "AND": lambda: t_and(a, self._props.get(b_stmt or "", TrinaryProposition("")).truth),
-            "OR":  lambda: t_or(a, self._props.get(b_stmt or "", TrinaryProposition("")).truth),
-            "IMPLIES": lambda: t_implies(a, self._props.get(b_stmt or "", TrinaryProposition("")).truth),
+            "OR": lambda: t_or(a, self._props.get(b_stmt or "", TrinaryProposition("")).truth),
+            "IMPLIES": lambda: t_implies(
+                a, self._props.get(b_stmt or "", TrinaryProposition("")).truth
+            ),
         }
         if op not in ops:
             raise ValueError(f"Unknown op: {op}. Use: {list(ops)}")
